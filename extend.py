@@ -1,8 +1,8 @@
-# on my machine, i ran this with:  
-#   python3.13 -B extend.py ../moot/optimize/[comp]*/*.csv
-
 import sys,random
 from ezr import the, DATA, csv, dot
+
+hi_dim = "hi_dimension_file_paths.txt"
+lo_dim = "lo_dimension_file_paths.txt"
 
 def show(lst):
   return print(*[f"{word:6}" for word in lst], sep="\t")
@@ -15,7 +15,27 @@ def myfun(train):
   size = "small" if size< 500 else ("med" if size<5000 else "hi")
   return [dim, size, x,len(d.cols.y), len(d.rows), train[17:]]
 
-random.seed(the.seed) #  not needed here, but good practice to always take care of seeds
-show(["dim", "size","xcols","ycols","rows","file"])
-show(["------"] * 6)
-[show(myfun(arg)) for arg in sys.argv if arg[-4:] == ".csv"]
+def append_to_file(file_name, lst):
+  with open(file_name, 'a') as file:
+    lst = [str(l) for l in lst]
+    a = [f"{word:6}" for word in lst]
+    file.write('\t'.join(a) +  "\n" )
+
+def separate_and_show():
+  for arg in sys.argv:
+    if arg[-4:] == ".csv":
+      result = myfun(arg)
+      show(result)
+      if result[0] != "small":
+        append_to_file(hi_dim, result)
+      else:
+        append_to_file(lo_dim, result)
+  return lo_dim, hi_dim
+
+# random.seed(the.seed) #  not needed here, but good practice to always take care of seeds
+# show(["dim", "size","xcols","ycols","rows","file"])
+# show(["------"] * 6)
+# separate_and_show()
+
+for arg in sys.argv:
+  print(arg)

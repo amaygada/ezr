@@ -1,21 +1,26 @@
 #
- 0,            smart/b=True,0,  0.24,  0.05,    - *--            |                   
+ 0, Smart/s=explore/b=False/N=50,  0.20,  0.08, -  * --             |                   
+ 0, Smart/s=exploit/b=False/N=40,  0.21,  0.03,  --*---             |                   
+ 0, Smart/s=exploit/b=True/N=50,  0.21,  0.03,  - *---             |                   
+ 0, Smart/s=exploit/b=False/N=50,  0.21,  0.06,  --* ---            |                   
+ 0, Smart/s=explore/b=True/N=40,  0.22,  0.04,   - *-              |                   
+ 0, Smart/s=exploit/b=True/N=40,  0.22,  0.07, --- * -             |                   
 #
- 1,            smart/b=True,0,  0.25,  0.04,    --* --           |                   
- 1,            dumb/b=False,1,  0.25,  0.07,   -- * --           |                   
- 1,            smart/b=True,0,  0.25,  0.07,  --  *----          |                   
- 1,            smart/b=True,0,  0.25,  0.06,  --- *--            |                   
- 1,            dumb/b=False,1,  0.26,  0.05,    -- *---          |                   
- 1,             dumb/b=True,1,  0.26,  0.09,    -  * -           |                   
- 1,           smart/b=False,0,  0.26,  0.07,    -- * ---------   |                   
- 1,            dumb/b=False,1,  0.27,  0.07,    -  *---          |                   
- 1,             dumb/b=True,1,  0.27,  0.03,    ---*--           |                   
- 1,           smart/b=False,0,  0.27,  0.06,     - * --          |                   
- 1,           smart/b=False,0,  0.27,  0.06,     - *----------   |                   
- 1,           smart/b=False,0,  0.28,  0.06,     - *----------   |                   
+ 1,    Dumb/ s=NA/ b=NA/ N=50,  0.24,  0.04,    - *-             |                   
+ 1, Smart/s=explore/b=True/N=50,  0.24,  0.03,   -- *-             |                   
 #
- 2,             dumb/b=True,1,  0.29,  0.03,      - *----        |                   
- 2,            dumb/b=False,1,  0.30,  0.04,     -- *----        |                   
- 2,             dumb/b=True,1,  0.31,  0.05,       - *--         |                   
+ 2, Smart/s=exploit/b=False/N=20,  0.26,  0.07,     -*  ----        |                   
+ 2, Smart/s=explore/b=False/N=40,  0.26,  0.06,    - *---           |                   
+ 2, Smart/s=exploit/b=True/N=30,  0.26,  0.10,  -    *--           |                   
+ 2, Smart/s=explore/b=True/N=30,  0.26,  0.04,     - *--           |                   
+ 2, Smart/s=explore/b=False/N=30,  0.27,  0.05,   --  *--           |                   
+ 2, Smart/s=exploit/b=False/N=30,  0.27,  0.09,    -- *  --------   |                   
+ 2,    Dumb/ s=NA/ b=NA/ N=40,  0.27,  0.04,     - *-            |                   
+ 2,    Dumb/ s=NA/ b=NA/ N=30,  0.28,  0.07,   --- * --          |                   
+ 2, Smart/s=explore/b=False/N=20,  0.28,  0.05,     -  *---         |                   
 #
- 3,                asIs,10000,  0.59,  0.13,           ------    |*------------      
+ 3,    Dumb/ s=NA/ b=NA/ N=20,  0.31,  0.05,      -- *---        |                   
+ 3, Smart/s=explore/b=True/N=20,  0.32,  0.05,       --* -------   |                   
+ 3, Smart/s=exploit/b=True/N=20,  0.37,  0.18,     ---    *    ----|-                  
+#
+ 4,                asIs,10000,  0.59,  0.13,           ------    |*------------      

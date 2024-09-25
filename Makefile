@@ -70,5 +70,29 @@ actb4: ## experiment: mqs
 		$(foreach f, $(wildcard $(Data)/$d/*.csv),   \
 				echo "python3 $(PWD)/ezr.py  -t $f -e $(Act)  | tee $(Out)/$(Act)/$(shell basename $f) & "; ))
 
+lodim="$(Top)/lo_dimension_file_paths.txt"
+hidim="$(Top)/hi_dimension_file_paths.txt"
+
+# actlodim:
+# 	mkdir -p $(Out)/$(Act)
+	
+# 	while IFS= read -r f; do \
+# 		echo "python3 $(Top)/data/optimize/$$f | tee $(Out)/$(Act)/$(shell basename $f) & "; \
+# 	done < $(lodim)
+
+actlodim:
+	mkdir -p $(Out)/$(Act)
+	
+	while IFS= read -r f; do \
+		echo "python3 /workspaces/ezr/dumb_vs_smart.py $(Top)/data/optimize/$$f | tee $(Out)/$(Act)/$$(basename $$f) &"; \
+	done < $(lodim)
+
+acthidim:
+	mkdir -p $(Out)/$(Act)
+	
+	while IFS= read -r f; do \
+		echo "python3 /workspaces/ezr/dumb_vs_smart.py $(Top)/data/optimize/$$f | tee $(Out)/$(Act)/$$(basename $$f) &"; \
+	done < $(hidim)
+
 fred:
 	echo $x

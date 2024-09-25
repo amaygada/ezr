@@ -77,4 +77,5 @@ def main(result_file_name, csv_file_name):
 #         main("hi_dim_result", "data/optimize/"+value)
 
 # print(sys.argv[1])
+
 main("", sys.argv[1])

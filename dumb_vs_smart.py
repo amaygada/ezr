@@ -78,4 +78,4 @@ def main(result_file_name, csv_file_name):
 
 # print(sys.argv[1])
 
-main("", sys.argv[1])
+# main("", sys.argv[1])

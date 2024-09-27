@@ -73,13 +73,6 @@ actb4: ## experiment: mqs
 lodim="$(Top)/lo_dimension_file_paths.txt"
 hidim="$(Top)/hi_dimension_file_paths.txt"
 
-# actlodim:
-# 	mkdir -p $(Out)/$(Act)
-	
-# 	while IFS= read -r f; do \
-# 		echo "python3 $(Top)/data/optimize/$$f | tee $(Out)/$(Act)/$(shell basename $f) & "; \
-# 	done < $(lodim)
-
 actlodim:
 	mkdir -p $(Out)/$(Act)
 	

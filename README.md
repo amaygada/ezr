@@ -49,13 +49,26 @@
 
 
 ## Results
-- For individual dataset result go to the folders 
+1. ![
+    SS-D results
+](image.png)
+    - The findings demonstrate that, even with a huge standard deviation (0.14 in one case), random guessing (Dumb, s=NA) can perform comparably to more advanced techniques (Smart strategies) for low-dimensional issues. This implies that although random guessing can be useful at times, its efficacy varies greatly. In a few instances, Smart strategies—especially those that use exploit (s=exploit/b=True)—perform marginally better than random guessing, but not much better.
+
+2. ![
+    SS-E results
+](image-1.png)
+    - Similar patterns are observed, where random guessing performs close to some of the Smart strategies, but the standard deviations remain large, indicating inconsistency in the results.
+
+
+3. For individual dataset result go to the folders 
     - hi_dim_result
     - lo_dim_result
 
-- Each result file inside these folders tells which method is doing better.
-- The results are sorted.
-- The top most is the best
+4. The data shows that random guessing becomes increasingly ineffective as the dimensionality increases. With smaller standard deviations, the Smart methods start to regularly beat the random guessing method, indicating more stable and trustworthy outcomes for higher-dimensional data.
+
+
+5. JJR1 might look promising for low-dimensional data but with significant variability in results.
+6.  JJR2 is supported by the data, indicating that random guessing is ineffective for high-dimensional problems, and more sophisticated methods perform better.
 
 ## Bottleneck
 - We were unable to successfully run rq.sh on our data.
